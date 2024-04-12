@@ -26,10 +26,7 @@
         <div class="list-container">
           <!-- side menu -->
           <ul class="ui divided list" id="films">
-
             <li class="film item">Movie titles will go here.</li>
-
-
           </ul>
         </div>
       </div>
@@ -48,7 +45,7 @@
         <div class="ui cards" id="showing">
           <div class="card">
             <div id="title" class="title">[MOVIE TITLE]</div>
-            <div id="runtime" class="meta">[RUNTIME] minutes </div>
+            <div id="runtime" class="meta">[RUNTIME] minutes</div>
             <div class="content">
               <div class="description">
                 <div id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
@@ -68,105 +65,3 @@
     <script src="src/index.js"></script>
   </body>
 </html>
-
-
-
-
-<!-- function renderOneFilm(films){
-  let card = document.createElement('li')
-  card.className = 'card'
-  card.innerHTML = `
-    <img scr="${assets/placeholderImage.png}">
-    <div class ="content">
-    <div class ="description">
-    <div id ="film-info">[insert movie description]</div>
-    <h4>${films.title}</h4>
-    <p>
-    $<span id="showtime">${films.showtime}</span>
-    $<span id="tickect-num">${film.ticket}</span> remaining tickets
-    </p>
-    <p>${films.description}</p>
-  </div>
-    </div>
-  `
-  //console.log(card);
-}
-function displayMovieDetails (){
-  displayMovieDetails.forEach(films => renderOneFilm(films))
-}
-displayMovieDetails();
-function renderOneFilm(films){
-  let card = document.createElement('li')
-  card.className = 'card'
-  card.innerHTML = `
-    <img scr="${assets/placeholderImage.png}">
-    <div class ="content">
-    <div class ="description">
-    <div id ="film-info">[insert movie description]</div>
-    <h4>${films.title}</h4>
-    <p>
-    $<span id="showtime">${films.showtime}</span>
-    $<span id="tickect-num">${film.ticket}</span> remaining tickets
-    </p>
-    <p>${films.description}</p>
-  </div>
-    </div>
-  `
- // console.log(card);
- document.querySelector('#poster').appendChild(card)
-}
-function displayMovieDetails(films) {
-  films.forEach(film => renderOneFilm(film));
-}
-// Assuming renderOneFilm function is defined elsewhere
-function renderOneFilm(film) {
-  // Render film details
-}
-// Assuming you have an array of films
-const films = [
-  { title: "Film 1", director: "Director 1" },
-  { title: "Film 2", director: "Director 2" },
-  // More film objects
-];
-// Call displayMovieDetails with the films array
-displayMovieDetails(films); -->
-
-<!-- fetch('http://localhost:3000/films', {
-  method: 'GET',
-  headers: {
-      'Content-Type': 'application/json'
-  }
-  // convert response to json
-}).then((res) => res.json())
-  // we can now access the converted data
-.then((data) => {
-  const item = document.getElementById('films')
-  
-  data.forEach( (title) => {
-   const paragraph =  document.createElement('p') 
-   paragraph.innerText = title.title
-   item.append(paragraph)
-  
-  });
-}) -->
-
-<!-- const buyTicket = async () => {
-  const response = await fetch(`${baseURL}/films/${currentFilmId}`, {
-   method: "PATCH",
-  headers: {
-   "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-   tickets_sold: 1
-  })
-  })
-  
-  if(response.ok) {
-  const updatedFilm = await fetchFilmById(currentFilmId)
-  updateFilmDetails(updatedFilm)
-  }
-  else{
-  console.error('Something went wrong')
-  }
-  }
-
